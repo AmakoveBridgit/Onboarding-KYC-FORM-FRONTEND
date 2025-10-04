@@ -16,7 +16,7 @@ function FormDetails() {
   useEffect(() => {
     async function fetchForm() {
       try {
-        const res = await axios.get(`http://127.0.0.1:8000/api/forms/forms/${id}/`);
+        const res = await axios.get(`https://amak.pythonanywhere.com/api/forms/forms/${id}/`);
         
         const normalizedSchema = {
           ...res.data,
@@ -89,7 +89,7 @@ function FormDetails() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/forms/submissions/",
+        "https://amak.pythonanywhere.com/api/forms/submissions/",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
